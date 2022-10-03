@@ -4,3 +4,8 @@
         (a) Km / h
         (b) m/s             """
 
+dist = int(input('Distancia(km)= '))
+tempo = int(input('tempo(min)= '))
+
+print(f'{dist / (tempo / 60)} km/h')
+print(f'{(dist * 1000) / (tempo * 60)} m/s ')
