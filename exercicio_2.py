@@ -4,8 +4,8 @@
         (a) Km / h
         (b) m/s             """
 
-dist = int(input('Distancia(km)= '))
-tempo = int(input('tempo(min)= '))
+dist = int(input('Distância percorrida(km)= '))
+tempo = int(input('Tempo necessário para percorrer x distância(min)= '))
 
-print(f'{dist / (tempo / 60)} km/h')
-print(f'{(dist * 1000) / (tempo * 60)} m/s ')
+print(f'Velocidade média(km/h)= {dist / (tempo / 60)} ')
+print(f'Velocidade média(m/s)= {(dist * 1000) / (tempo * 60)} ')
