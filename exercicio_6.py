@@ -1,5 +1,5 @@
-'''     6. Escreva um programa em Python que lê três números e que diz qual o
-        maior dos números lidos.        '''
+'''     6.  Escreva um programa em Python que lê três números e que diz qual o
+            maior dos números lidos.        '''
 
 numeros = []
 numeros.append(int(input(f'1º número: ')))

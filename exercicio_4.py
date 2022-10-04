@@ -1,29 +1,52 @@
-'''     4. Escreva um programa que lê um número inteiro correspondente a um certo número de segundos e que escreve
-        o número de dias, horas, minutos e segundos correspondentes a esse número. Por exemplo,
-        Escreva o número de segundos? 345678
-        dias: 4 horas: 0 mins: 1 segs: 18'''
-'''
+'''     4.  Escreva um programa que lê um número inteiro correspondente a um certo número de segundos e que escreve
+            o número de dias, horas, minutos e segundos correspondentes a esse número. Por exemplo,
+            Escreva o número de segundos? 345678
+            dias: 4 horas: 0 mins: 1 segs: 18'''
+
+#https://acervolima.com/programa-python-para-converter-segundos-em-horas-minutos-e-segundos/
+
 if __name__ == '__main__':
-    def convertor(n):
-        dia = n // (24 * 3600)
+    def dia(valor):
+        dias = valor / 60
+        dias = dias / 60
+        dias = dias / 24
 
-        n = n % (24 * 3600)
-        horas = n // 3600
+        return dias
 
-        n %= 3600
-        minutos = n // 60
 
-        n %= 60
-        segundos = n
+    def hour(valor):
+        hours = valor % (24 * 3600)
+        hours = hours // 3600
 
-        print(f'Numero convertido é: {dia} dia/s, {horas} hora/s, {minutos} minuto/s, {segundos} segundos.')
+        return hours
+
+
+    def min(valor):
+        mins = valor % (24 * 60)
+        mins = mins // 60
+
+        return mins
+
+
+    def seg(valor):
+        segs = valor
+        segs %= 60
+
+        return segs
 
 
     if __name__ == '__main__':
-        continuar = 's' or 'S'
-        while continuar == 's' or 'S':
-            segundos = int(input(f'Insira o numero: '))
-            print(f'Numero convertido é: {convertor(segundos)}')
-            continuar = input('Quer continuar? [s, n] ')
-        print('Adeus!')
-'''
+        while True:
+            try:
+                segundos = int(input('Quantos segundos? '))
+
+                print(f'dias: {int(dia(segundos))} hours: {int(hour(segundos))} mins: {int(min(segundos))} segs: {int(seg(segundos))}')
+
+                continuar = input('Repetir (s | n)? ')
+                if continuar == 'n':
+                    break
+
+            except ValueError:
+                print('Digite um valor válido')
+
+        print(f'Adeus!')
