@@ -14,7 +14,7 @@
     8 x 9 = 72
     8 x 10 = 80     '''
 
-def cal(valor):
+def tabuada(valor):
     for x in range(1, 11):
         mult = valor * x
         print(f'{valor} × {x} = {mult}')
@@ -25,7 +25,7 @@ if __name__ == '__main__':
         try:
             num = int(input('Qual é o número? '))
 
-            cal(num)
+            tabuada(num)
 
             continuar = input('Repetir (s | n)? ')
             if continuar == 'n':
